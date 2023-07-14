@@ -5,7 +5,8 @@
 #     Each grep command extracts the numeric value following the specific                         #
 #     label using a positive lookbehind (\K) and the \d+ pattern to match one or more digits.     #
 #     The captured values are then assigned to separate variables                                 #
-#     The columns printed is based on summary.txt file into the serenity report:                  #
+#     The columns printed is based on summary.txt file into the serenity report                   #
+#     The columns printed is based on summary.txt file into the serenity report                   #
 ###################################################################################################
 
 TEST_RESULTS_LOCATION="${1:-/home/runner/work/test-base-metrics/test-base-metrics/target/site/}"
