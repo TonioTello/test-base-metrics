@@ -26,4 +26,6 @@ jobs:
         run: mvn  clean verify -Denvironment=qa
       - name: Collect build data
         if: always()
-        run: expr $(date +%s) - ${START_TIME}
+        run: |
+          echo "TOTAL_DURATION=$(expr $(date +%s) - ${START_TIME})"
+          ./src/test/resources/test-results/test_result_script.sh
