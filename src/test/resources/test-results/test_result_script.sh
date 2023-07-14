@@ -9,7 +9,7 @@
 #     The columns printed is based on summary.txt file into the serenity report                   #
 ###################################################################################################
 
-TEST_RESULTS_LOCATION="${1:-/home/runner/work/test-base-metrics/target/site}"
+TEST_RESULTS_LOCATION="${1:-/home/runner/work/test-base-metrics/test-base-metrics/target/site/serenity}"
 TEST_RESULTS_STRING=$(cat "${TEST_RESULTS_LOCATION}/summary.txt")
 # Extract and store the numeric values in separate variables
 TEST_CASES=$(echo "TEST_RESULTS_STRING" | grep -oP 'Test Cases:\s+\K\d+')
