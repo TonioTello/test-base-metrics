@@ -21,11 +21,11 @@ echo "PENDING=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Pending:\s+\K\d+')"
 echo "IGNORED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Ignored:\s+\K\d+')"
 echo "SKIPPED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')"
 
-CURRENT_DATE= $(date +'%Y%m%d_%H%M%S')
+CURRENT_DATE=$(date +'%Y%m%d_%H%M%S')
 aws s3 cp ${TEST_RESULTS_LOCATION} s3://automation-temp-report/${CURRENT_DATE}/ --recursive
 
 REPORT_URL="https://automation-temp-report.s3.eu-north-1.amazonaws.com/${CURRENT_DATE}/index.html"
 echo "Click the following link to the report:"
 
 # Create the link reference
-echo -e "\e]8;;${REPORT_URL}\aTest results\e]8;;\a"
+echo -e "\e]8;;${REPORT_URL}\a Test results\e]8;;\a"
