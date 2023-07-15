@@ -31,4 +31,5 @@ echo "Click the following link to the report:"
 echo -e "\e]8;;${REPORT_URL}\a Test results\e]8;;\a"
 
 #Send report to slack channel
-curl -X POST -H "Content-type: application/json" --data "{\"text\":\"The process has been finished. Report: https://automation-temp-report.s3.eu-north-1.amazonaws.com/${CURRENT_DATE}/index.html\"}" https://hooks.slack.com/services/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
+curl -X POST -H "Content-type: application/json" --data "{\"text\":\"The process has been finished. Report: https://automation-temp-report.s3.eu-north-1.amazonaws.com/${CURRENT_DATE}/index.html\"}" https://hooks.slack.com/services/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
+curl -X POST -H "Content-type: application/json" --data "{\"text\":\"The process has been finished. Report: https://jenkins-temp-report.s3.amazonaws.com/OTTO-UAT-NIGHTLY-AUTOMATION/"%_DATE%"/index.html\"}" https://hooks.slack.com/services/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
