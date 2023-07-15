@@ -29,3 +29,11 @@ jobs:
         run: |
           echo "TOTAL_DURATION=$(expr $(date +%s) - ${START_TIME})"
           ./src/test/resources/test-results/test_result_script.sh
+      - name: Configure AWS CLI
+        run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws configure set default.region eu-north-1
+      - name: Upload Serenity Reports to S3
+        run: aws s3 cp file:///home/runner/work/test-base-metrics/test-base-metrics/target/site/serenity s3://automation-temp-report/$(date +'%Y%m%d_%H%M%S')/ --recursive
+
