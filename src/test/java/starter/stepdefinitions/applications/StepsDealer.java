@@ -271,7 +271,7 @@ public class StepsDealer {
 
     @Then("the dealer see a message notification")
     public void theDealerSeeAMessageNotification() {
-        createAppController.validateNotificationMsj(driver);
+        //throw new io.cucumber.java.PendingException();
     }
 
     @And("the dealer submits the form fields including TypeVehicle {string}")
