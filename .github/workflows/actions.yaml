@@ -13,6 +13,7 @@ jobs:
     env:
       RUNNER_OS: true
       HEADLESS_CHROME: true
+      WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
 
     steps:
       - name: Set start time

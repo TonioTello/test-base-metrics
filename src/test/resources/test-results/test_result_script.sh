@@ -31,5 +31,5 @@ echo "Click the following link to the report:"
 echo -e "\e]8;;${REPORT_URL}\a Test results\e]8;;\a"
 
 #Send report to slack channel
-curl -X POST -H "Content-type: application/json" --data "{\"text\":\"The process has been finished. Report: https://automation-temp-report.s3.eu-north-1.amazonaws.com/${CURRENT_DATE}/index.html\"}" ${{secrets.WEBHOOK_URL}}
-curl -X POST -H "Content-type: application/json" --data "{\"text\":\"The process has been finished. Report: https://jenkins-temp-report.s3.amazonaws.com/OTTO-UAT-NIGHTLY-AUTOMATION/"%_DATE%"/index.html\"}" ${{secrets.WEBHOOK_URL}}
+curl -X POST -H "Content-type: application/json" --data "{\"text\":\"The process has been finished. Report: https://automation-temp-report.s3.eu-north-1.amazonaws.com/${CURRENT_DATE}/index.html\"}" ${WEBHOOK_URL}
+curl -X POST -H "Content-type: application/json" --data "{\"text\":\"The process has been finished. Report: https://jenkins-temp-report.s3.amazonaws.com/OTTO-UAT-NIGHTLY-AUTOMATION/"%_DATE%"/index.html\"}" ${WEBHOOK_URL}
