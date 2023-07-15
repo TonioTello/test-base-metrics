@@ -119,13 +119,13 @@ public class StepsDealer {
 
     @Then("the dealer should see that Unpaid Balance and Calculated Payment should be equal to {string} and {string} respectively")
     public void theDealerShouldSeeThatUnpaidBalanceAndCalculatedPaymentShouldBeEqualToAndRespectively(String unpaidBalance, String calculatedPayment) {
-        System.out.println("unpaidBalance expected = " + unpaidBalance + "and calculatedPayment expected = " + calculatedPayment);
+        //System.out.println("unpaidBalance expected = " + unpaidBalance + "and calculatedPayment expected = " + calculatedPayment);
     }
 
     @And("the Total Check and Amount Financed should be equal to {string} and {string} respectively")
     public void theTotalCheckAndAmountFinancedShouldBeEqualToAndRespectively(String totalCheckLender, String amountFinancedLender) {
-        System.out.println("TotalCheckLender expected = " + totalCheckLender + "and AmountFinancedLender expected = " + amountFinancedLender);
-        startAppController.logoutUser(driver);
+        //System.out.println("TotalCheckLender expected = " + totalCheckLender + "and AmountFinancedLender expected = " + amountFinancedLender);
+        //startAppController.logoutUser(driver);
     }
 
     @When("the lender claims the new application from dealer")
