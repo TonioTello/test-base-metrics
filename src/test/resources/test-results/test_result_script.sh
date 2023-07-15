@@ -21,4 +21,4 @@ echo "PENDING=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Pending:\s+\K\d+')"
 echo "IGNORED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Ignored:\s+\K\d+')"
 echo "SKIPPED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')"
 
-aws s3 cp TEST_RESULTS_LOCATION s3://automation-temp-report/$(date +'%Y%m%d_%H%M%S')/ --recursive
+aws s3 cp ${TEST_RESULTS_LOCATION} s3://automation-temp-report/$(date +'%Y%m%d_%H%M%S')/ --recursive
