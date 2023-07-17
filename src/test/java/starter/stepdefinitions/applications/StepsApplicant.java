@@ -71,6 +71,7 @@ public class StepsApplicant {
 
     @And("the applicant see that an application has been created")
     public void theApplicantSeeThatAAnApplicationHasBeenCreated() {
+        throw new io.cucumber.java.PendingException();
     }
 
     @When("the applicant submits the form fields")
