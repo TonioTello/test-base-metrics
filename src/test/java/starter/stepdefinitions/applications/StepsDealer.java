@@ -65,7 +65,7 @@ public class StepsDealer {
     @Given("the dealer is logged at Ottomoto home page")
     public void theDealerIsLoggedAtOttomotoHomePage() {
         //throw new io.cucumber.java.PendingException();
-
+        Assert.fail();
     }
 
 
