@@ -46,7 +46,7 @@ public class StepsApplicant {
         navigateController.toTheOttomotoHomePage();
         startAppController.inputCredentials(driver, username, password);*/
         try {
-            Thread.sleep(7000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
