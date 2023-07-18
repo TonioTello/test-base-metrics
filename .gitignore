@@ -63,3 +63,6 @@ Thumbs.db
 
 #Project specific
 package-lock.json
+
+#ngrok
+src/test/resources/ngrok/ngrok.exe

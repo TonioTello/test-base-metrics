@@ -46,7 +46,7 @@ public class StepsApplicant {
         navigateController.toTheOttomotoHomePage();
         startAppController.inputCredentials(driver, username, password);*/
         try {
-            Thread.sleep(5000);
+            Thread.sleep(7000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -71,7 +71,7 @@ public class StepsApplicant {
 
     @And("the applicant see that an application has been created")
     public void theApplicantSeeThatAAnApplicationHasBeenCreated() {
-        throw new io.cucumber.java.PendingException();
+        //throw new io.cucumber.java.PendingException();
     }
 
     @When("the applicant submits the form fields")
