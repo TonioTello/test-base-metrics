@@ -12,14 +12,26 @@
 TEST_RESULTS_LOCATION="${1:-/home/runner/work/test-base-metrics/test-base-metrics/target/site/serenity}"
 TEST_RESULTS_STRING=$(cat "${TEST_RESULTS_LOCATION}/summary.txt")
 # Extract and store the numeric values in separate variables
-echo "TEST_CASES=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Test Cases:\s+\K\d+')"
-echo "PASSED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Passed:\s+\K\d+')"
-echo "FAILED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed:\s+\K\d+')"
-echo "FAILED_WITH_ERRORS=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed with errors:\s+\K\d+')"
-echo "COMPROMISED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Compromised:\s+\K\d+')"
-echo "PENDING=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Pending:\s+\K\d+')"
-echo "IGNORED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Ignored:\s+\K\d+')"
-echo "SKIPPED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')"
+#echo "TEST_CASES=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Test Cases:\s+\K\d+')"
+#echo "PASSED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Passed:\s+\K\d+')"
+#echo "FAILED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed:\s+\K\d+')"
+#echo "FAILED_WITH_ERRORS=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed with errors:\s+\K\d+')"
+#echo "COMPROMISED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Compromised:\s+\K\d+')"
+#echo "PENDING=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Pending:\s+\K\d+')"
+#echo "IGNORED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Ignored:\s+\K\d+')"
+#echo "SKIPPED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')"
+
+cat <<EOF | curl --data-binary @- ${PUSHGATEWAY_URL}/metrics/job/github_actions
+github_actions_test_cases $(echo "$TEST_RESULTS_STRING" | grep -oP 'Test Cases:\s+\K\d+')
+github_actions_passed $(echo "$TEST_RESULTS_STRING" | grep -oP 'Passed:\s+\K\d+')
+github_actions_failed $(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed:\s+\K\d+')
+github_actions_failed_with_errors $(echo $(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed with errors:\s+\K\d+')
+github_actions_compromised $(echo "$TEST_RESULTS_STRING" | grep -oP 'Compromised:\s+\K\d+')
+github_actions_pending $(echo "$TEST_RESULTS_STRING" | grep -oP 'Pending:\s+\K\d+')
+github_actions_ignored $(echo "$TEST_RESULTS_STRING" | grep -oP 'Ignored:\s+\K\d+')
+github_actions_skipped $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
+EOF
+
 
 CURRENT_DATE=$(date +'%Y%m%d_%H%M%S')
 aws s3 cp ${TEST_RESULTS_LOCATION} s3://automation-temp-report/${CURRENT_DATE}/ --recursive

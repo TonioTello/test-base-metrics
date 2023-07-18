@@ -14,6 +14,7 @@ jobs:
       RUNNER_OS: true
       HEADLESS_CHROME: true
       WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+      PUSHGATEWAY_URL: ${{secrets.PUSHGATEWAY_URL}}
 
     steps:
       - name: Set start time
@@ -35,6 +36,6 @@ jobs:
         if: always()
         run: |
           echo "TOTAL_DURATION=$(expr $(date +%s) - ${START_TIME})"
-          echo "GITHUB_TOTAL_DURATION $(expr $(date +%s) - ${START_TIME})" | curl --data-binary @- ${{secrets.PUSHGATEWAY_URL}}/metrics/job/github_actions
+          echo "GITHUB_TOTAL_DURATION $(expr $(date +%s) - ${START_TIME})" | curl --data-binary @- ${secrets.PUSHGATEWAY_URL}/metrics/job/github_actions
           ./src/test/resources/test-results/test_result_script.sh
 
