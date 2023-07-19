@@ -22,14 +22,14 @@ TEST_RESULTS_STRING=$(cat "${TEST_RESULTS_LOCATION}/summary.txt")
 #echo "SKIPPED=$(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')"
 
 cat <<EOF | curl --data-binary @- ${PUSHGATEWAY_URL}/metrics/job/github_actions
-github_actions_test_cases $(echo "$TEST_RESULTS_STRING" | grep -oP 'Test Cases:\s+\K\d+')
-github_actions_passed $(echo "$TEST_RESULTS_STRING" | grep -oP 'Passed:\s+\K\d+')
-github_actions_failed $(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed:\s+\K\d+')
-github_actions_failed_with_errors $(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed with errors:\s+\K\d+')
-github_actions_compromised $(echo "$TEST_RESULTS_STRING" | grep -oP 'Compromised:\s+\K\d+')
-github_actions_pending $(echo "$TEST_RESULTS_STRING" | grep -oP 'Pending:\s+\K\d+')
-github_actions_ignored $(echo "$TEST_RESULTS_STRING" | grep -oP 'Ignored:\s+\K\d+')
-github_actions_skipped $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
+github_actions_test_cases{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Test Cases:\s+\K\d+')
+github_actions_passed{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Passed:\s+\K\d+')
+github_actions_failed{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed:\s+\K\d+')
+github_actions_failed_with_errors{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Failed with errors:\s+\K\d+')
+github_actions_compromised{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Compromised:\s+\K\d+')
+github_actions_pending{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Pending:\s+\K\d+')
+github_actions_ignored{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Ignored:\s+\K\d+')
+github_actions_skipped{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
 EOF
 
 
