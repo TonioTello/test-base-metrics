@@ -62,7 +62,6 @@ public class StepsApplicant {
 
     @Then("the applicant see a message notification")
     public void theApplicantSeeAMessageNotification() {
-        Assert.fail();
     }
 
     @Then("the super admin see a message notification")

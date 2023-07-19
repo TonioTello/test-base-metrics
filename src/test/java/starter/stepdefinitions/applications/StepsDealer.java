@@ -78,6 +78,7 @@ public class StepsDealer {
     @Then("the dealer see a successful message notification")
     public void theDealerSeeASuccessfulMessageNotification() {
        // createAppController.validateNotificationMsj(driver);
+        Assert.fail();
     }
 
     @And("the dealer see that a new application has been created")
