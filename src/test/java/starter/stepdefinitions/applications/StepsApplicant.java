@@ -73,7 +73,7 @@ public class StepsApplicant {
     public void theApplicantSeeThatAAnApplicationHasBeenCreated() {
         //throw new io.cucumber.java.PendingException();
         //Assert.fail();
-        //Assert.fail();
+        Assert.fail();
     }
 
     @When("the applicant submits the form fields")
