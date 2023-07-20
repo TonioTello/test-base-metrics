@@ -57,7 +57,7 @@ for ((i=2; i<=$(wc -l < "$file"); i++)); do
         echo "Error: Invalid value found after the equal symbol."
     fi
 
-    echo "$scenario_name ${!scenario_name}" | curl --data-binary @- http://localhost:9091//metrics/job/all_scenarios
+    echo "$scenario_name ${!scenario_name}" | curl --data-binary @- ${PUSHGATEWAY_URL}/metrics/job/all_scenarios
     #github_actions_skipped $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
 
     sleep 15
