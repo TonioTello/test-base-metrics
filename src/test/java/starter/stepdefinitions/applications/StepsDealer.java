@@ -84,6 +84,7 @@ public class StepsDealer {
     @And("the dealer see that a new application has been created")
     public void theDealerSeeThatANewApplicationHasBeenCreated() {
         //throw new io.cucumber.java.PendingException();
+        //throw new io.cucumber.java.PendingException();
 
     }
 
