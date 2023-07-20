@@ -60,7 +60,7 @@ for ((i=2; i<=$(wc -l < "$file"); i++)); do
     echo "$scenario_name ${!scenario_name}" | curl --data-binary @- ${PUSHGATEWAY_URL}/metrics/job/all_scenarios
     #github_actions_skipped $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
 
-    sleep 5
+    sleep 1
 
     #echo "Variable name: $scenario_name"
     #echo "Variable value: ${!scenario_name}"
@@ -70,7 +70,7 @@ done
 
 
 CURRENT_DATE=$(date +'%Y%m%d_%H%M%S')
-#aws s3 cp ${TEST_RESULTS_LOCATION} s3://automation-temp-report/${CURRENT_DATE}/ --recursive
+aws s3 cp ${TEST_RESULTS_LOCATION} s3://automation-temp-report/${CURRENT_DATE}/ --recursive
 
 REPORT_URL="https://automation-temp-report.s3.eu-north-1.amazonaws.com/${CURRENT_DATE}/index.html"
 echo "Click the following link to the report: "
