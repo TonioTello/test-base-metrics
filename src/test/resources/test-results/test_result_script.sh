@@ -60,7 +60,7 @@ for ((i=2; i<=$(wc -l < "$file"); i++)); do
     echo "$scenario_name ${!scenario_name}" | curl --data-binary @- ${PUSHGATEWAY_URL}/metrics/job/all_scenarios
     #github_actions_skipped $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
 
-    sleep 1
+    #sleep 1
 
     #echo "Variable name: $scenario_name"
     #echo "Variable value: ${!scenario_name}"
