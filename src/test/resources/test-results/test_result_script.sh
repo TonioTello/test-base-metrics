@@ -32,6 +32,42 @@ github_actions_ignored{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", 
 github_actions_skipped{action_id="${GITHUB_RUN_NUMBER}",commit="${GITHUB_SHA}", actor="${GITHUB_ACTOR}", branch="${GITHUB_REF}"} $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
 EOF
 
+# Replace 'your_file.csv' with the actual file name
+file="target/site/serenity/results.csv"
+
+# Loop through each line in the CSV file starting from the 2nd line
+for ((i=2; i<=$(wc -l < "$file"); i++)); do
+    result=$(awk -F',' -v line=$i 'NR == line {gsub(" ", "_", $2); gsub(" ", "_", $3); print $2 "=" $3}' "$file" | tr -d '"' | tr -d "'" | tr -d "." )
+    echo "$result"
+    # Extract the variable name (string before the equal symbol)
+    scenario_name=$(echo "$result" | cut -d '=' -f 1)
+
+    # Extract the value (string after the equal symbol)
+    value=$(echo "$result" | cut -d '=' -f 2)
+
+    # Remove leading and trailing whitespace from the value
+    value=$(echo "$value" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+
+    # Check if the value is "SUCCESS" or "FAILURE" and assign the appropriate value
+    if [ "$value" = "SUCCESS" ]; then
+        eval "$scenario_name=1"
+    elif [ "$value" = "FAILURE" ]; then
+        eval "$scenario_name=0"
+    else
+        echo "Error: Invalid value found after the equal symbol."
+    fi
+
+    echo "$scenario_name ${!scenario_name}" | curl --data-binary @- http://localhost:9091//metrics/job/all_scenarios
+    #github_actions_skipped $(echo "$TEST_RESULTS_STRING" | grep -oP 'Skipped:\s+\K\d+')
+
+    sleep 15
+
+    #echo "Variable name: $scenario_name"
+    #echo "Variable value: ${!scenario_name}"
+done
+
+
+
 
 CURRENT_DATE=$(date +'%Y%m%d_%H%M%S')
 #aws s3 cp ${TEST_RESULTS_LOCATION} s3://automation-temp-report/${CURRENT_DATE}/ --recursive
