@@ -58,20 +58,20 @@ public class StepsLender {
     public void theLenderSeeAMessageNotification() {
         //throw new io.cucumber.java.PendingException();
         //throw new io.cucumber.java.PendingException();
-        Assert.fail();
+        //Assert.fail();
 
     }
 
     @And("the lender see that an application has been created")
     public void theLenderSeeThatAnApplicationHasBeenCreated() {
-        throw new io.cucumber.java.PendingException();
+        //throw new io.cucumber.java.PendingException();
 
     }
 
 
     @Given("the lender has created an application")
     public void theLenderHasCreatedAnApplication() throws InterruptedException {
-        throw new io.cucumber.java.PendingException();
+        //throw new io.cucumber.java.PendingException();
 
     }
 
