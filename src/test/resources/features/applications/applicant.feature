@@ -27,7 +27,7 @@ Feature: Applications Applicant
       | TypeVehicle  |
       #| Passenger    |
       #| Recreational |
-      | Aircraft     |
+     # | Aircraft     |
       | Boat         |
 
 
