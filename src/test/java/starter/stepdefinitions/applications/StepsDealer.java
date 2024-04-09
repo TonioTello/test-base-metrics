@@ -62,8 +62,8 @@ public class StepsDealer {
 
     }
 
-    @Given("the dealer is logged at Ottomoto home page")
-    public void theDealerIsLoggedAtOttomotoHomePage() {
+    @Given("the dealer is logged at Appmoto home page")
+    public void theDealerIsLoggedAtAppmotoHomePage() {
         //throw new io.cucumber.java.PendingException();
     }
 
@@ -146,8 +146,8 @@ public class StepsDealer {
 
     }
 
-    @Given("the dealer{int} is logged at Ottomoto home page")
-    public void theDealerIsLoggedAtOttomotoHomePage(int number) {
+    @Given("the dealer{int} is logged at Appmoto home page")
+    public void theDealerIsLoggedAtAppmotoHomePage(int number) {
         //throw new io.cucumber.java.PendingException();
     }
 
@@ -232,14 +232,14 @@ public class StepsDealer {
 
     }
 
-    @When("the dealer send the request to OTTOinspector")
-    public void theDealerSendTheRequestToOTTOinspector() {
+    @When("the dealer send the request to APPinspector")
+    public void theDealerSendTheRequestToAPPinspector() {
         //throw new io.cucumber.java.PendingException();
 
     }
 
-    @And("the dealer see that the OTTOinspector status is pending")
-    public void theDealerSeeThatTheOTTOinspectorStatusIsPending() {
+    @And("the dealer see that the APPinspector status is pending")
+    public void theDealerSeeThatTheAPPinspectorStatusIsPending() {
         //throw new io.cucumber.java.PendingException();
 
     }
@@ -251,14 +251,14 @@ public class StepsDealer {
 
     }
 
-    @When("the dealer send the request to OTTOverify")
-    public void theDealerSendTheRequestToOTTOverify() {
+    @When("the dealer send the request to APPverify")
+    public void theDealerSendTheRequestToAPPverify() {
         //throw new io.cucumber.java.PendingException();
 
     }
 
-    @And("the dealer see that the OTTOverify status is pending")
-    public void theDealerSeeThatTheOTTOverifyStatusIsPending() {
+    @And("the dealer see that the APPverify status is pending")
+    public void theDealerSeeThatTheAPPverifyStatusIsPending() {
         //throw new io.cucumber.java.PendingException();
 
     }
@@ -290,8 +290,8 @@ public class StepsDealer {
     private void elseif(boolean contains) {
     }
 
-    @When("the dealer send the request to OTTOinsure")
-    public void theDealerSendTheRequestToOTTOinsure() {
+    @When("the dealer send the request to APPinsure")
+    public void theDealerSendTheRequestToAPPinsure() {
         //throw new io.cucumber.java.PendingException();
 
     }
@@ -302,8 +302,8 @@ public class StepsDealer {
 
     }
 
-    @Then("the dealer see an OTTOinsure successful message notification")
-    public void theDealerSeeAnOTTOinsureSuccessfulMessageNotification() {
+    @Then("the dealer see an APPinsure successful message notification")
+    public void theDealerSeeAnAPPinsureSuccessfulMessageNotification() {
         //throw new io.cucumber.java.PendingException();
 
     }

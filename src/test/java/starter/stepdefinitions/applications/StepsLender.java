@@ -40,11 +40,11 @@ public class StepsLender {
 
 
     public void login(String rol) {
-        navigateController.toTheOttomotoHomePage();
+        navigateController.toTheAppmotoHomePage();
     }
 
-    @Given("the lender is logged at Ottomoto home page")
-    public void theLenderIsLoggedAtOttomotoHomePage() {
+    @Given("the lender is logged at Appmoto home page")
+    public void theLenderIsLoggedAtAppmotoHomePage() {
         //throw new io.cucumber.java.PendingException();
     }
 
@@ -81,8 +81,8 @@ public class StepsLender {
 
     }
 
-    @When("the lender send the request to OTTOinspector")
-    public void theLenderSendTheRequestToOTTOinspector() {
+    @When("the lender send the request to APPinspector")
+    public void theLenderSendTheRequestToAPPinspector() {
         //throw new io.cucumber.java.PendingException();
 
     }
@@ -92,8 +92,8 @@ public class StepsLender {
         //throw new io.cucumber.java.PendingException();
     }
 
-    @And("the lender see that the OTTOinspector status is pending")
-    public void theLenderSeeThatTheOTTOinspectorStatusIsPending() {
+    @And("the lender see that the APPinspector status is pending")
+    public void theLenderSeeThatTheAPPinspectorStatusIsPending() {
         //throw new io.cucumber.java.PendingException();
 
     }

@@ -3,7 +3,7 @@ Feature: Applications Dealer
 
   @dealer_1 @smoke
   Scenario: Create an application with default values as Dealer
-    Given the dealer is logged at Ottomoto home page
+    Given the dealer is logged at Appmoto home page
     When the dealer submits only the default values in the form
     Then the dealer see a successful message notification
     And the dealer see that a new application has been created
@@ -11,7 +11,7 @@ Feature: Applications Dealer
 
   @dealer_2 @smoke
   Scenario: Create a full application as Dealer
-    Given the dealer is logged at Ottomoto home page
+    Given the dealer is logged at Appmoto home page
     When the dealer submits all the form fields
     Then the dealer see a successful message notification
     And the dealer see that a new application has been created
@@ -19,7 +19,7 @@ Feature: Applications Dealer
 
  # @dealer_22 @smoke
 #  Scenario: Create and approve an application from DEALER
-#    Given the dealer is logged at Ottomoto home page
+#    Given the dealer is logged at Appmoto home page
 #    And the dealer submits the all mandatory form fields
 #    When the lender claims the new application from dealer
 #    And the lender approves the new application from dealer
@@ -29,7 +29,7 @@ Feature: Applications Dealer
 
 #  @dealer_4   #Todo old feature
 #  Scenario: Send an application to an unregistered applicant
-#    Given the dealer3 is logged at Ottomoto home page
+#    Given the dealer3 is logged at Appmoto home page
 #    And the dealer sent an application to an unregistered applicant
 #    When the unregistered applicant receives the application via email or text message
 #    And the unregistered applicant accept and submits the form fields
@@ -38,7 +38,7 @@ Feature: Applications Dealer
 
   @dealer_5
   Scenario: Validate JD Power information is preserved.
-    Given the dealer is logged at Ottomoto home page
+    Given the dealer is logged at Appmoto home page
     When the dealer submits the form fields with the JDpower info
     Then the dealer see a successful message notification
     And the dealer see that JD Power values has been saved
@@ -52,26 +52,26 @@ Feature: Applications Dealer
     And the dealer see that JD Power values has been update
 
   @dealer_7 @smoke @smoke3 @smoke_integration
-  Scenario: Ensure the OTTOinspector request is sent properly.
+  Scenario: Ensure the APPinspector request is sent properly.
     Given the dealer has created a simple application
     And the dealer update the "original" application with the required fields
-    When the dealer send the request to OTTOinspector
+    When the dealer send the request to APPinspector
     Then the dealer see a successful message notification
-    And the dealer see that the OTTOinspector status is pending
+    And the dealer see that the APPinspector status is pending
 
 
   @dealer_8 @bug
-  Scenario: Ensure the OTTOverify request is sent properly.
+  Scenario: Ensure the APPverify request is sent properly.
     Given the dealer has created a simple application
     And the dealer update the "original" application with the required fields
-    When the dealer send the request to OTTOverify
+    When the dealer send the request to APPverify
     Then the dealer see a successful message notification
-    #And the dealer see that the OTTOverify status is pending
+    #And the dealer see that the APPverify status is pending
 
 
   @dealer_9 @smoke4
   Scenario Outline: Create an application with different TypeVehicles
-    Given the dealer is logged at Ottomoto home page
+    Given the dealer is logged at Appmoto home page
     When the dealer submits all the form fields including TypeVehicle "<TypeVehicle>"
     Then the dealer see a message notification
     And the dealer see that a new application has been created
@@ -85,16 +85,16 @@ Feature: Applications Dealer
 
 
   @dealer_11 @smoke @smoke_integration @smoke_01
-  Scenario: Ensure the OTTOinsure request is sent properly.
+  Scenario: Ensure the APPinsure request is sent properly.
     Given the dealer has created a full application
-    When the dealer send the request to OTTOinsure
-    Then the dealer see an OTTOinsure successful message notification
+    When the dealer send the request to APPinsure
+    Then the dealer see an APPinsure successful message notification
     #And the dealer receive an email to continue the process with Gabi
 
 
 #  @dealer_12  @smoke @smoke3 @smoke4 @smoke_01   #Todo old feature
 #  Scenario Outline: Send an application to an unregistered applicant with different TypeVehicles
-#    Given the dealer3 is logged at Ottomoto home page
+#    Given the dealer3 is logged at Appmoto home page
 #    And the dealer sent an application to an unregistered applicant
 #    When the unregistered applicant receives the application via email or text message
 #    And the unregistered applicant submits the form including TypeVehicle "<TypeVehicle>"
@@ -135,7 +135,7 @@ Feature: Applications Dealer
       | Loan            | 60        | Monthly   | 60             | 37           | 50000     | 10000       | 0                  | 500             | 1500       | 500         | 1000          | 2880     | 100        | 200    | 300        | 400       | 500      | 2000      | 200           | 3000                  | 300                       | 700         | 170             | 100       | 200            | 300         | 44804.38      | 1315.07           | 41081.70         | 51104.38             |
 
   @dealer_15
-  Scenario: Create contract using OTTOproducts
+  Scenario: Create contract using APPproducts
     Given the dealer has created a simple application
     And the dealer update the "original" application with the required fields
     When the dealer creates a contract with a product from TPA Alpha Warranty

@@ -84,11 +84,11 @@ public class StepsCompanies {
     EnvironmentVariables environmentVariables;
 
     public void login(String rol) {
-        navigateController.toTheOttomotoHomePage();
+        navigateController.toTheAppmotoHomePage();
     }
 
-    @Given("the super admin is logged at Ottomoto home page")
-    public void theSuperAdminIsLoggedAtOttomotoHomePage() {
+    @Given("the super admin is logged at Appmoto home page")
+    public void theSuperAdminIsLoggedAtAppmotoHomePage() {
         //throw new io.cucumber.java.PendingException();
     }
 
@@ -130,8 +130,8 @@ public class StepsCompanies {
 
     }
 
-    @Given("the lender is logged at Ottomoto home page to send a request")
-    public void theLenderIsLoggedAtOttomotoHomePageToSendARequest() {
+    @Given("the lender is logged at Appmoto home page to send a request")
+    public void theLenderIsLoggedAtAppmotoHomePageToSendARequest() {
 
         //throw new io.cucumber.java.PendingException();
 
@@ -154,8 +154,8 @@ public class StepsCompanies {
         //throw new io.cucumber.java.PendingException();
     }
 
-    @Given("the dealer is logged at Ottomoto home page to send a request")
-    public void theDealerIsLoggedAtOttomotoHomePageToSendARequest() {
+    @Given("the dealer is logged at Appmoto home page to send a request")
+    public void theDealerIsLoggedAtAppmotoHomePageToSendARequest() {
         //throw new io.cucumber.java.PendingException();
 
     }
@@ -213,8 +213,8 @@ public class StepsCompanies {
 
     }
 
-    @Then("the new user can log in at the Ottomoto home page")
-    public void theNewUserCanLogInAtTheOttomotoHomePage() throws InterruptedException {
+    @Then("the new user can log in at the Appmoto home page")
+    public void theNewUserCanLogInAtTheAppmotoHomePage() throws InterruptedException {
         //throw new io.cucumber.java.PendingException();
 
     }
@@ -394,8 +394,8 @@ public class StepsCompanies {
 
     }
 
-    @Given("the user is on the Ottomoto login page")
-    public void theUserIsOnTheOttomotoLoginPage() {
+    @Given("the user is on the Appmoto login page")
+    public void theUserIsOnTheAppmotoLoginPage() {
         //throw new io.cucumber.java.PendingException();
     }
 
@@ -410,8 +410,8 @@ public class StepsCompanies {
 
     }
 
-    @Then("the user can log in on the Ottomoto home page with the new password")
-    public void theUserCanLogInOnTheOttomotoHomePageWithTheNewPassword() {
+    @Then("the user can log in on the Appmoto home page with the new password")
+    public void theUserCanLogInOnTheAppmotoHomePageWithTheNewPassword() {
         //throw new io.cucumber.java.PendingException();
     }
 

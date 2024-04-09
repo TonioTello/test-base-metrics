@@ -3,14 +3,14 @@ Feature: Applications Lender
 
   @lender_1
   Scenario: Create an application with default values as LENDER
-    Given the lender is logged at Ottomoto home page
+    Given the lender is logged at Appmoto home page
     When the lender submits only the default values in the form
     Then the lender see a message notification
     And the lender see that an application has been created
 
   @lender_2
   Scenario: Create a full application as LENDER
-    Given the lender is logged at Ottomoto home page
+    Given the lender is logged at Appmoto home page
     When the lender submits all the form fields
     Then the lender see a message notification
     And the lender see that an application has been created
@@ -18,7 +18,7 @@ Feature: Applications Lender
 
   @lender_3 @smoke @smoke3
   Scenario Outline: Create an application with different TypeVehicles
-    Given the lender is logged at Ottomoto home page
+    Given the lender is logged at Appmoto home page
     When the lender submits all the form fields including TypeVehicle "<TypeVehicle>"
     Then the lender see a message notification
     And the lender see that an application has been created
@@ -31,16 +31,16 @@ Feature: Applications Lender
 #      | Boat         |
 
   @lender_4 @smoke @smoke_01
-  Scenario: Ensure the OTTOinspector request is sent properly as LENDER.
+  Scenario: Ensure the APPinspector request is sent properly as LENDER.
     Given the lender has created an application
     And the lender update the "original" application with the required fields
-    When the lender send the request to OTTOinspector
+    When the lender send the request to APPinspector
     Then the lender see a successful message notification
-    And the lender see that the OTTOinspector status is pending
+    And the lender see that the APPinspector status is pending
 
   @lender_5
   Scenario: Fill out the questionnaire for a lender admin
-    Given the lender is logged at Ottomoto home page
+    Given the lender is logged at Appmoto home page
     When the lender submits the configuration questionnaire
     Then the lender see a message notification
     And the lender see that questionnaire has been saved

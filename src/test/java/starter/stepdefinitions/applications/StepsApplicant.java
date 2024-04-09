@@ -39,11 +39,11 @@ public class StepsApplicant {
         //throw new io.cucumber.java.PendingException();
     }
 
-    @Given("the applicant is logged at Ottomoto home page")
-    public void theApplicantIsLoggedAtOttomotoHomePage() {
+    @Given("the applicant is logged at Appmoto home page")
+    public void theApplicantIsLoggedAtAppmotoHomePage() {
 /*        String username = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("user.username.applicant");
         String password = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("user.password.applicant");
-        navigateController.toTheOttomotoHomePage();
+        navigateController.toTheAppmotoHomePage();
         startAppController.inputCredentials(driver, username, password);*/
         try {
             Thread.sleep(5000);

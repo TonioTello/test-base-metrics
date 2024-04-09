@@ -4,7 +4,7 @@ Feature: E2E Flow
 
   @applicant_4 @smoke_01
   Scenario Outline: Create and approve an application with different TypeVehicles
-    Given the applicant is logged at Ottomoto home page
+    Given the applicant is logged at Appmoto home page
     And the applicant submits the form fields including TypeVehicle "<TypeVehicle>"
     When the dealer claims and sends the new application to the lender
     And the lender approves the new application
@@ -33,7 +33,7 @@ Feature: E2E Flow
 
 #  @dealer_10 @smoke @smoke3 @smoke4
 #  Scenario Outline: Create and approve an application with different TypeVehicles
-#    Given the dealer is logged at Ottomoto home page
+#    Given the dealer is logged at Appmoto home page
 #    And the dealer submits the form fields including TypeVehicle "<TypeVehicle>"
 #    When the lender claims the new application from dealer
 #    And the lender approves the new application from dealer
@@ -49,7 +49,7 @@ Feature: E2E Flow
 
   @companies_9
   Scenario: Create a education blog post
-    Given the super admin is logged at Ottomoto home page
+    Given the super admin is logged at Appmoto home page
 #    When the super admin submits all the blog post information
 #    Then the super admin see a successful message notification
 #    And the super admin see that the blog post has been created

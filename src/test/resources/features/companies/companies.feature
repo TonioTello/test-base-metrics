@@ -3,7 +3,7 @@ Feature: Companies
 
   @companies_1 @smoke @smoke3  @smoke_01
   Scenario Outline: Set a company with a user
-    Given the super admin is logged at Ottomoto home page
+    Given the super admin is logged at Appmoto home page
     And the super admin has a new company created type "<TypeCompany>"
     And the company created has a new branch and store-queue
     When the super admin search for the company and select its branch and store-queue
@@ -17,7 +17,7 @@ Feature: Companies
 
 #  @companies_2
 #  Scenario: New relationship from lender to dealer
-#    Given the lender is logged at Ottomoto home page to send a request
+#    Given the lender is logged at Appmoto home page to send a request
 #    And the lender sent a new relationship request to the dealer
 #    When the dealer open the request from the lender
 #    And the dealer accept the new relationship request
@@ -25,7 +25,7 @@ Feature: Companies
 #
 #  @companies_3
 #  Scenario: New relationship from dealer to lender
-#    Given the dealer is logged at Ottomoto home page to send a request
+#    Given the dealer is logged at Appmoto home page to send a request
 #    And the dealer sent a new relationship request to the lender
 #    When the lender open the request from the lender
 #    And the lender accept the new relationship request
@@ -37,7 +37,7 @@ Feature: Companies
 #    When the new user selects the plan and fill out the company info
 #    And the new user completes the email confirmation
 #    And the new user actives the company with new credentials
-#    Then the new user can log in at the Ottomoto home page
+#    Then the new user can log in at the Appmoto home page
 #    #And the new user can pay for plan selected
 
     Examples:
@@ -47,7 +47,7 @@ Feature: Companies
 
   @companies_5
   Scenario: Create new discount coupon
-    Given the super admin is logged at Ottomoto home page
+    Given the super admin is logged at Appmoto home page
     When the super admin submits all the coupon information
     Then the super admin see a message notification
     And the super admin see that a new coupon has been created
@@ -61,7 +61,7 @@ Feature: Companies
 #    Then the dealer can use the integrations functionalities
 
   @companies_7 @smoke @smoke_01
-  Scenario: Send OTTOsign documents from dealer to the applicant
+  Scenario: Send APPsign documents from dealer to the applicant
     Given the applicant has created a full application
     And the super admin makes the dealer's documentation available
 #    When the dealer chooses the documents for the applicant
@@ -70,7 +70,7 @@ Feature: Companies
 
   @companies_8
   Scenario: Create a new campaign-advertising
-    Given the super admin is logged at Ottomoto home page
+    Given the super admin is logged at Appmoto home page
     When the super admin submits all the advertising information
     Then the super admin see a successful message notification
     And the super admin see that the advertising has been created
@@ -78,14 +78,14 @@ Feature: Companies
 
 #  @companies_10
 #  Scenario: Create a recovery password request to get a new one
-#    Given the user is on the Ottomoto login page
+#    Given the user is on the Appmoto login page
 #    When the user set up the "<Email>" to recover the password
 #    And the user receives the link to set up a new password
-#    Then the user can log in on the Ottomoto home page with the new password
+#    Then the user can log in on the Appmoto home page with the new password
 
   @companies_11
   Scenario: Create new users as super admin
-    Given the super admin is logged at Ottomoto home page
+    Given the super admin is logged at Appmoto home page
 #    When the super admin submits all new user information
 #    #Then the super admin see a message notification
 #    And the super admin see that a new user has been created
