@@ -54,7 +54,7 @@ The test suite covers various features and scenarios. Some of the key features a
 - Docker
 
 ```
-git clone 
+git clone https://github.com/TonioTello/test-base-metrics.git
 ```
 
 ## Run the tests
