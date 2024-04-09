@@ -36,7 +36,7 @@ public class StepsDealer {
     private int numAppsAfter;
     private String applicationNum = "00000";
     private String linkNewApplication = "";
-    private String unRegisterApplicantEmail = String.format("ottomoto-1fcbe8+%s@inbox.mailtrap.io", new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()));
+    private String unRegisterApplicantEmail = String.format("appmoto-1fcbe8+%s@inbox.mailtrap.io", new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()));
     String newApplicationUrl = "";
 
     String environment = "";

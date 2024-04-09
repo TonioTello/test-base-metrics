@@ -155,7 +155,7 @@ public class StartAppController {
     public WebDriver login(String rol) {
         String username = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(String.format("user.username.%s", rol));
         String password = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty(String.format("user.password.%s", rol));
-        navigateController.toTheOttomotoHomePage();
+        navigateController.toTheAppmotoHomePage();
         //driver.manage().window().maximize();
         inputCredentials(driver, username, password);
         return webDriver;

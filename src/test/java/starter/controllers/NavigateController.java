@@ -10,26 +10,26 @@ public class NavigateController extends UIInteractions {
 
     EnvironmentVariables environmentVariables;
 
-    @Step("Navigate to Ottomoto home page")
-    public void toTheOttomotoHomePage() {
+    @Step("Navigate to Appmoto home page")
+    public void toTheAppmotoHomePage() {
         String app_url = EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("app.url") ;
         openUrl(app_url);
     }
 
     @Step("Navigate to New Company Page")
-    public void toTheOttomotoNewCompanyPage() {
-        String url = "https://ottomotoqa-dev.lean-tech.io/new-company";
+    public void toTheAppmotoNewCompanyPage() {
+        String url = "https://appmotoqa-dev.lean-tech.io/new-company";
         openUrl(url);
     }
 
     @Step("Navigate to New Dealer CompanyPage")
     public void toNewDealerCompanyPage() {
-        String url = "https://ottomotoqa-dev.lean-tech.io/new-company?type=dealer";
+        String url = "https://appmotoqa-dev.lean-tech.io/new-company?type=dealer";
         openUrl(url);
     }
     @Step("Navigate to Lender Company Page")
     public void toNewLenderCompanyPage() {
-        String url = "https://ottomotoqa-dev.lean-tech.io/new-company?type=lender";
+        String url = "https://appmotoqa-dev.lean-tech.io/new-company?type=lender";
         openUrl(url);
     }
 

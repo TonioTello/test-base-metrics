@@ -43,7 +43,7 @@ public class SetCompanyController {
         try {
             String letterTypeCompany = String.valueOf(typeCompany.charAt(0)).toUpperCase();
             //email = String.format("tester.testyng+company%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
-            email = String.format("ottomoto-1fcbe8+company%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
+            email = String.format("appmoto-1fcbe8+company%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
             NewCompanyPage newCompanyPage = new NewCompanyPage(driver);
             newCompanyPage.setTypeCompanyInput(typeCompany);
             newCompanyPage.setNameCompanyInput(nameCompany);
@@ -109,7 +109,7 @@ public class SetCompanyController {
         try {
             String letterTypeCompany = String.valueOf(typeCompany.charAt(0)).toUpperCase();
             //emailAddress = String.format("tester.testyng+branch%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
-            emailAddress = String.format("ottomoto-1fcbe8+branch%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
+            emailAddress = String.format("appmoto-1fcbe8+branch%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
             NewCompanyPage newCompanyPage = new NewCompanyPage(driver);
             newCompanyPage.setBranchNameInput(branchName);
             newCompanyPage.setBranchEmailInput(emailAddress);
@@ -236,7 +236,7 @@ public class SetCompanyController {
         try {
             String letterTypeCompany = String.valueOf(typeCompany.charAt(0)).toUpperCase();
             //emailAddress = String.format("tester.testyng+store%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
-            emailAddress = String.format("ottomoto-1fcbe8+store%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
+            emailAddress = String.format("appmoto-1fcbe8+store%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
             NewCompanyPage newCompanyPage = new NewCompanyPage(driver);
             newCompanyPage.setOfficeBranchNameInput(branchName);
             newCompanyPage.setOfficeNameInput(officeName);
@@ -313,16 +313,16 @@ public class SetCompanyController {
     public void fillOutUserInfo(WebDriver driver, String typeCompany, String branchName, String storeName, String firstName, String lastName, String emailAddress, String phoneNumber, String businessAddress, String zipCode, String rol) {
         try {
             String letterTypeCompany = String.valueOf(typeCompany.charAt(0)).toUpperCase();
-            emailAddress = String.format("ottomoto-1fcbe8+dev_user%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
+            emailAddress = String.format("appmoto-1fcbe8+dev_user%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
             NewCompanyPage newCompanyPage = new NewCompanyPage(driver);
             //newCompanyPage.setUserBranchNameInput(branchName);
             //newCompanyPage.setUserStoreNameInput(storeName);
             newCompanyPage.setUserFirstNameInput(firstName);
             newCompanyPage.setUserLastNameInput(lastName);
-            //newCompanyPage.setUserEmailInput("ottomoto-1fcbe8+DEA@inbox.mailtrap.io");
+            //newCompanyPage.setUserEmailInput("appmoto-1fcbe8+DEA@inbox.mailtrap.io");
             newCompanyPage.setUserEmailInput(emailAddress);
            // newCompanyPage.setUserEmailInput("aagrawal+dealer_4@cobaltcore.io");
-            //newCompanyPage.setUserEmailInput(String.format("ottomoto-1fcbe8+robot_user%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime())));
+            //newCompanyPage.setUserEmailInput(String.format("appmoto-1fcbe8+robot_user%s%s@gmail.com", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime())));
             //newCompanyPage.setUserEmailInput("tester.testyng+uat_relationship_dealer@gmail.com");
             newCompanyPage.setUserPhoneNumberInput(phoneNumber);
             //newCompanyPage.setUserPhoneNumberInput("7705308818");
@@ -424,7 +424,7 @@ public class SetCompanyController {
         try {
             String letterTypeCompany = String.valueOf(typeCompany.charAt(0)).toUpperCase();
             //emailAddress = String.format("tester.testyng+queue%s%s@inbox.mailtrap.io", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
-            emailAddress = String.format("ottomoto-1fcbe8+queue%s%s@inbox.mailtrap.io", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
+            emailAddress = String.format("appmoto-1fcbe8+queue%s%s@inbox.mailtrap.io", letterTypeCompany, new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
             NewCompanyPage newCompanyPage = new NewCompanyPage(driver);
             //newCompanyPage.setOfficeBranchNameInput(branchName);
             newCompanyPage.setOfficeNameInput(queueName);
@@ -866,7 +866,7 @@ public class SetCompanyController {
             questionnairePage.setNameLenderInput(faker.name().firstName());
             questionnairePage.setContactNameInput(faker.name().firstName());
             questionnairePage.setPhoneInput(faker.phoneNumber().phoneNumber());
-            questionnairePage.setEmailInput(String.format("ottomoto-1fcbe8+questionnaire%s@inbox.mailtrap.io", new SimpleDateFormat("ddHHmmss").format(Calendar.getInstance().getTime())));
+            questionnairePage.setEmailInput(String.format("appmoto-1fcbe8+questionnaire%s@inbox.mailtrap.io", new SimpleDateFormat("ddHHmmss").format(Calendar.getInstance().getTime())));
             questionnairePage.setNumberBranchesInput("1");
             questionnairePage.setCurrentSoftwareUseInput("IOS1233");
             //questionnairePage.setLocationUnderwritingInput(faker.address().fullAddress());

@@ -93,12 +93,12 @@ public class ApiController {
             String apiToken = "7d6cfc938aa62249a8c95e32c4845846";
             ResponseBody responseBodyInbox = getMethod_ResponseBody(String.format("%s/messages?page=1&last_id", baseURL), apiToken);
             String lastSubject = String.valueOf(responseBodyInbox.jsonPath().getList("subject").get(0));
-/*            if (!lastSubject.equalsIgnoreCase("Create New Ottomoto Password")){
+/*            if (!lastSubject.equalsIgnoreCase("Create New Appmoto Password")){
                 Thread.sleep(59000); //Todo wait for next email
                 responseBodyInbox = getMethod_ResponseBody(String.format("%s/messages?page=1&last_id", baseURL), apiToken);
                 lastSubject = String.valueOf(responseBodyInbox.jsonPath().getList("subject").get(0));
             }*/
-            while (!lastSubject.equalsIgnoreCase("Create New Ottomoto Password") & count < 8) {
+            while (!lastSubject.equalsIgnoreCase("Create New Appmoto Password") & count < 8) {
                 count += 1;
                 Thread.sleep(20000);
                 responseBodyInbox = getMethod_ResponseBody(String.format("%s/messages?page=1&last_id", baseURL), apiToken);
@@ -106,7 +106,7 @@ public class ApiController {
                 System.out.println("lastSubject = " + lastSubject);
             }
 
-            if (lastSubject.equalsIgnoreCase("Create New Ottomoto Password")) {
+            if (lastSubject.equalsIgnoreCase("Create New Appmoto Password")) {
                 String lastEmailId = String.valueOf(responseBodyInbox.jsonPath().getList("id").get(0));
                 ResponseBody responseBodyMail = getMethod_ResponseBody(String.format("%s/messages/%s/body.html", baseURL, lastEmailId), apiToken);
                 String responseBodyMailString = String.valueOf(responseBodyMail.asString());
@@ -289,11 +289,11 @@ public class ApiController {
             String apiToken = "7d6cfc938aa62249a8c95e32c4845846";
             ResponseBody responseBodyInbox = getMethod_ResponseBody(String.format("%s/messages?page=1&last_id", baseURL), apiToken);
             String lastSubject = String.valueOf(responseBodyInbox.jsonPath().getList("subject").get(0));
-            if (!lastSubject.contains("New Ottomoto application")) {
+            if (!lastSubject.contains("New Appmoto application")) {
                 Thread.sleep(59000); //Todo wait for next email
                 System.out.println("lastSubject = " + lastSubject);
             }
-            if (lastSubject.contains("New Ottomoto application")) {
+            if (lastSubject.contains("New Appmoto application")) {
                 String lastEmailId = String.valueOf(responseBodyInbox.jsonPath().getList("id").get(0));
                 ResponseBody responseBodyMail = getMethod_ResponseBody(String.format("%s/messages/%s/body.html", baseURL, lastEmailId), apiToken);
                 String responseBodyMailString = String.valueOf(responseBodyMail.asString());

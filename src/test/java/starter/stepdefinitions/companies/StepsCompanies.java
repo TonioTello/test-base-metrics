@@ -59,7 +59,7 @@ public class StepsCompanies {
     private String branchNameF = faker.company().name().replaceAll("[,-.]", "");
     private String storeNameF = faker.company().name().replaceAll("[,-.]", "");
     private String queueNameF = faker.company().name().replaceAll("[,-.]", "");
-    private String emailAddressF = String.format("ottomoto-1fcbe8+settingCompany%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
+    private String emailAddressF = String.format("appmoto-1fcbe8+settingCompany%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmm").format(Calendar.getInstance().getTime()));
     private String phoneNumberF = faker.phoneNumber().phoneNumber();
     private String businessAddressF = faker.address().fullAddress();
     private String optionId = "1";
@@ -68,7 +68,7 @@ public class StepsCompanies {
     private String verificationCode = "";
     private String zipCode = "28031";
     private String rolF = faker.job().position();
-    private String username = String.format("ottomoto-1fcbe8+%s@inbox.mailtrap.io", new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()));
+    private String username = String.format("appmoto-1fcbe8+%s@inbox.mailtrap.io", new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime()));
     private String emailRecoverPassword = "";
     private String password = "2022ottoMOTO*";
     private String newPassword =  String.format("2022ottoMOTO%s*", new SimpleDateFormat("yyyyMM_HHmmss").format(Calendar.getInstance().getTime()));

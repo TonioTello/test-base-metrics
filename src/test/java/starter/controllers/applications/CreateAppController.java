@@ -393,10 +393,10 @@ public class CreateAppController {
             coApplicantPage.setMiddleNameInput(faker.name().firstName());
             coApplicantPage.setSuffixInput(faker.name().suffix());
             coApplicantPage.setDriversLicenseInput("012345678");
-            coApplicantPage.setEmailInput(String.format("ottomoto-1fcbe8+coAppFirst%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
+            coApplicantPage.setEmailInput(String.format("appmoto-1fcbe8+coAppFirst%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
 
             coApplicantPage.setLicenseExpirationInput("07/22/2000");
-            coApplicantPage.setSecundaryEmailInput(String.format("ottomoto-1fcbe8+coAppSecond%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
+            coApplicantPage.setSecundaryEmailInput(String.format("appmoto-1fcbe8+coAppSecond%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
             coApplicantPage.setPhoneNumberInput("8159969738");
             coApplicantPage.setSecundaryPhoneNumberInput("9159969739");
             coApplicantPage.setHomeAddressAppInput(faker.address().fullAddress());
@@ -632,7 +632,7 @@ public class CreateAppController {
             newAppPage.setSuffixInput(faker.name().suffix());
             newAppPage.setDriversLicenseInput("012345678");
             newAppPage.setLicenseExpirationInput("07/22/2000");
-            newAppPage.setSecundaryEmailInput(String.format("ottomoto-1fcbe8+App%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
+            newAppPage.setSecundaryEmailInput(String.format("appmoto-1fcbe8+App%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
             newAppPage.setSecundaryPhoneNumberInput("9159969739");
             //newAppPage.setHomeAddressLine2Input("4379 Everette Alley");
             newAppPage.setHomeAddressLine2Input("8392 South 22nd Cir");
@@ -687,7 +687,7 @@ public class CreateAppController {
             newAppPage.setSuffixInput(faker.name().suffix());
             newAppPage.setDriversLicenseInput("012345678");
             newAppPage.setLicenseExpirationInput("07/22/2000");
-            newAppPage.setSecundaryEmailInput(String.format("ottomoto-1fcbe8+App%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
+            newAppPage.setSecundaryEmailInput(String.format("appmoto-1fcbe8+App%s@inbox.mailtrap.io", new SimpleDateFormat("MMddHHmmss").format(Calendar.getInstance().getTime())));
             newAppPage.setSecundaryPhoneNumberInput("9159969739");
             //newAppPage.setHomeAddressLine2Input("4379 Everette Alley");
             newAppPage.setHomeAddressLine2Input("8392 South 22nd Cir");
@@ -1325,8 +1325,8 @@ public class CreateAppController {
             NewAppPage newAppPage = new NewAppPage(driver);
             newAppPage.clickOnOTTinsure();
             Thread.sleep(2000);
-            //newAppPage.setOttoInsureEmailInput(String.format("ottomoto-1fcbe8+uat_dealer%s@inbox.mailtrap.io", new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime())));
-            newAppPage.setOttoInsureEmailInput("ottomoto-1fcbe8+uat_dealer@inbox.mailtrap.io");
+            //newAppPage.setOttoInsureEmailInput(String.format("appmoto-1fcbe8+uat_dealer%s@inbox.mailtrap.io", new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime())));
+            newAppPage.setOttoInsureEmailInput("appmoto-1fcbe8+uat_dealer@inbox.mailtrap.io");
             Thread.sleep(2000);
             //newAppPage.setOttoInsurePhoneInput("7705308818"); //Todo 770-530-8818 Athena
             //newAppPage.setOttoInsurePhoneInput("7703623638");
