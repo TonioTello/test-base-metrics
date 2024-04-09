@@ -8,7 +8,7 @@ This project serves as a Test Automation Project integrating Maven test suite in
 Focuses on exposing the metrics from the continuous integration suite. Introduces Prometheus, Docker, Docker Compose, bash scripting, and Ngrok to support metrics from GitHub Actions test suite into the local server.
 
 ### Test Suite Overview
-The test suite covers various features and scenarios, with a focus on timer information. Some of the key features and scenarios include:
+The test suite covers various features and scenarios. Some of the key features and scenarios include:
 
 - **Applications**
     - *Applicant*
